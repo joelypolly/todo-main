@@ -36,7 +36,9 @@ def index():
 @app.route('/add', methods=('GET', 'POST'))
 def add():
     if request.method == 'POST':
-        title = request.json['title']
+        title = request.form['title']  # Use request.form to get form data instead of JSON. 
+        # Alternative is to update the frontend to support JSON request i.e. AJAX 
+        # or fetch with custom payload
         conn = get_db_connection()
         conn.execute('INSERT INTO todo (title) VALUES (?)', (title,))
         conn.commit()
