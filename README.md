@@ -31,8 +31,13 @@ Our new TODO tracker app is launching tomorrow, and we're finally going to be ri
   - found the method we reading from the JSON method, replaced with form instead
 
 - [x] Achieved the reordering (time spent 1 hour)
+
   - There is a transaction so updates are atomic
   - Issues
     - Not really any use if this app is multi user as the frontend won't be accurate to the actual ordering in the DB
     - Could add frontend reordering and a save button that would then reflect actual user
     - UI still looks pretty janky
+
+- [] Adding full text search (time spend 10 min)
+  - Going to just do frontend search for now
+  - Could also use full text search on the database side
